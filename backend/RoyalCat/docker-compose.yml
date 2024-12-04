@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  spring:
+    container_name: spring
+    image: spring
+    environment:
+      - TZ=Asia/Seoul
+    privileged: true
+    networks:
+      - royal_cat_network
+
+networks:
+  royal_cat_network:
+    external: true

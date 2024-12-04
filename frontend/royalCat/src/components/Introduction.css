@@ -1,0 +1,162 @@
+.intro-container {
+  height: 924px;
+  text-align: center;
+}
+
+.intro-container .title {
+  padding-top: 80px;
+  font-weight: bolder;
+  font-size: 40px;
+}
+
+.carousel-fixed-text {
+  width: 728px;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 50px auto 0;
+  font-weight: bolder;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-fixed-text h2.active-text {
+  color: #000;
+}
+
+.content-box {
+  width: 728px;
+  position: relative;
+  background-color: #000;
+  margin: 40px auto 0;
+  height: 450px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sub-content {
+  width: 95%;
+  height: 95%;
+  background-color: #ddd;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.carousel-content {
+  display: flex;
+  align-items: center;
+}
+
+.carousel-slide {
+  min-width: 100%;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 15px;
+}
+
+.carousel-toggles {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.carousel-toggles button {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: none;
+}
+
+.carousel-toggles button.active-toggle {
+  width: 20px;
+  border-radius: 100px;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: #000;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.prev {
+  left: -70px;
+}
+
+.next {
+  right: -70px;
+}
+
+.prev:hover,
+.next:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* 반응형: 화면 너비 1200px 이하 */
+@media (max-width: 1200px) {
+  .carousel-fixed-text {
+    width: 600px;
+  }
+  .content-box {
+    width: 600px;
+    height: 371px;
+  }
+  .sub-content {
+    width: 95%;
+    height: 95%;
+  }
+  .carousel-slide {
+    min-width: 100%;
+  }
+}
+
+/* 반응형: 화면 너비 768px 이하 */
+@media (max-width: 768px) {
+  .content-box {
+    width: 485px;
+    height: 300px;
+  }
+  .sub-content {
+    width: 95%;
+    height: 95%;
+  }
+  .carousel-slide {
+    min-width: 100%;
+  }
+}
+
+/* 반응형: 화면 너비 480px 이하 */
+@media (max-width: 480px) {
+  .content-box {
+    width: 360px;
+    height: 222px;
+  }
+  .sub-content {
+    width: 95%;
+    height: 95%;
+  }
+  .carousel-slide {
+    min-width: 100%;
+  }
+}
